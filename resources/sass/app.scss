@@ -1,0 +1,85 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// FontAwesome
+@import 'node_modules/font-awesome/scss/font-awesome.scss';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+.bg-salud{
+	background-color: #40b7bd;
+	padding: 15px;
+	margin-bottom: 12px;
+	color: #ffffff;
+}
+.bg-vida{
+	background-color: #2a9a4c;
+	padding: 15px;
+	margin-bottom: 12px;
+	color: #ffffff;
+}
+.bg-hogar{
+	background-color: #e0208f;
+	padding: 15px;
+	margin-bottom: 12px;
+	color: #ffffff;
+}
+.bg-autos{
+	background-color: #c91f3a;
+	padding: 15px;
+	margin-bottom: 16px;
+	color: #ffffff;
+}
+.spacing-button{
+	margin: 12px 0 60px 0;
+}
+.bg-allianz{
+	background-color: #0e2060;
+	border-color: #0e2060;
+	border-radius: 0px;
+	padding: 0.8rem 1rem;
+	font-size: 1.425rem;
+	font-weight: bolder;
+}
+.bg-allianz:hover{
+	background-color: #0e2060bf;
+}
+.text-allianz{
+	color: #0e2060;
+}
+.border-checkbox{
+	position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.section-left{
+	padding: 0px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	background-color:#3d231b;
+	height : 100%;
+	color : #FFF;
+}
+
+.section-right{
+	padding: 0px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	background-color:#FFF;
+	height : 100%;
+	color : #3d231b;
+}
