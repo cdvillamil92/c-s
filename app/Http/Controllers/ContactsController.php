@@ -83,6 +83,16 @@ class ContactsController extends Controller
         //
     }
 
+    public function contacts(Request $request, Contacts $contacts)
+    {
+        $data = Contacts::where('key', $request->key)->first();
+        if (is_null($data)) {
+            return 'Es nulo';
+        }else{
+            return view('welcome')->with('data', $data);
+        }
+    }
+
     public function import()
     {
         $filename = public_path().'/name-file.csv';

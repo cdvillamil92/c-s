@@ -6,7 +6,7 @@
         <div class="col-lg-7 col-md-7">
             <div class="content">
                 <div class="section-header">
-                    <h4 class="section-title"><strong>Buen día</strong></h4>
+                    <h4 class="section-title"><strong>Buen día  {{ $data->nombre }}</strong></h4>
                     <p>Sabemos que te interesa mantener tu tranquilidad, el bienestar de quienes más te importan, y proteger todo aquello que has construido.</p>
                     <p>En <strong>SEGUROS AUTOMONTAÑA LTDA,</strong> como tu asesor de seguros de confianza, te invitamos a conocer los principales beneficios del portafolio de <strong>Seguros Allianz:</strong></p>
                 </div>
@@ -38,7 +38,8 @@
                 </div>
                 <div class="row justify-content-center spacing-button">
                     <div class="col-lg-6 col-md-6 col-xs-12">
-                        <a href="{{ route('allianz.aliado.experto') }}" class="btn btn-primary btn-lg btn-block bg-allianz">Quiero saber más</a>
+                        <!-- <a href="{{ route('allianz.aliado.experto') }}" class="btn btn-primary btn-lg btn-block bg-allianz">Quiero saber más</a> -->
+                        <a href="{{ route('allianz.aliado.experto', $data->id_tomador) }}" class="btn btn-primary btn-lg btn-block bg-allianz">Quiero saber más</a>
                     </div>
                 </div>
                 <div class="row">
