@@ -12,9 +12,22 @@ class ContactsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
+    
     {
-        return view('allianz_aliado_experto');
+        $contact = Contacts::where('key', $request->contact)->first();
+        
+        if($contact){
+            return view('welcome')->with('data', $contact);    
+        }else{
+            abort(404);
+        }
+        //if (is_null($data)) {
+        //    return 'Es nulo';
+        //}else{
+        //return view('welcome')->with('data', $contact);
+        //}
+        //return view('allianz_aliado_experto');
     }
 
     /**
@@ -44,9 +57,9 @@ class ContactsController extends Controller
      * @param  \App\Contacts  $contacts
      * @return \Illuminate\Http\Response
      */
-    public function show(Contacts $contacts)
+    public function show(Contacts $contact)
     {
-        //
+        
     }
 
     /**
@@ -55,9 +68,10 @@ class ContactsController extends Controller
      * @param  \App\Contacts  $contacts
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contacts $contacts)
+    public function edit(Contacts $contact)
     {
-        //
+        
+        return view('allianz_aliado_experto', compact('contact'));
     }
 
     /**
@@ -69,7 +83,9 @@ class ContactsController extends Controller
      */
     public function update(Request $request, Contacts $contacts)
     {
-        //
+        //dd($request->all());
+        //dd($request);
+        dd($request);
     }
 
     /**

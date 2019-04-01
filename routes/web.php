@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contacts/{key}', 'ContactsController@contacts');
+Route::get('/contacts/{contact}', 'ContactsController@index');
 
-Route::get('/allianz-aliado-experto', 'ContactsController@index')->name('allianz.aliado.experto');
+Route::get('/allianz-aliado-experto/contacts/{contact}/edit', 'ContactsController@edit')->name('allianz.aliado.experto');
+
+Route::post('/allianz-aliado-experto', 'ContactsController@update')->name('allianz.aliado.update');
 
 Auth::routes();
 
